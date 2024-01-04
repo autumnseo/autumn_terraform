@@ -1,16 +1,16 @@
-# main.tf
-
 terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.0"
+      version = "~> 4.16"
     }
   }
+
+  required_version = ">= 1.2.0"
 }
 
 provider "aws" {
-  region = var.region
+  region = "ap-northest-2"
 }
 
 resource "aws_vpc" "main" {
