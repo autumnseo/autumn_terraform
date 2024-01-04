@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "ap-northest-2"
+  region = var.region
 }
 
 resource "aws_vpc" "main" {
